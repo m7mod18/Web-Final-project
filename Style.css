@@ -1,0 +1,499 @@
+/* Resetting default styles */
+* {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* منع التمرير الجانبي */
+html, body {
+    overflow-x: hidden;
+}
+
+/* التأكد من أن جميع العناصر لا تتجاوز عرض الشاشة */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a0336;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #252525;
+    padding: 20px 50px;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #f3d00d;
+}
+
+.logo img {
+    max-width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #f3d00d;
+    color: white;
+    border-radius: 5px;
+}
+.word1{
+    font-size: 30px;
+    color: #ffffff;
+}
+.word2{
+    font-size: 30px;
+    color: #f3d00d;
+}
+.container-1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the container without distortion */
+    z-index: -1; /* Push video behind the content */
+}
+
+.container-1 .content {
+    position: relative;
+    z-index: 1; /* Keep content above the video */
+    color: white;
+    text-align: center;
+}
+
+.container-1 h2 {
+    font-size: 35px;
+    color: #f3d00d;
+    font-weight: bold;
+    animation: slideIn 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.container-1 p {
+    color: white;
+    font-size: 20px;
+}
+
+.container-1 .button-discover {
+    font-size: 20px;
+    color: #f3d00d;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.842);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 30px 0 0 0;
+   gap: 10px;
+
+}
+
+/* ----------------------- game Title ----------------------------*/
+.game-Tile{
+    width: 100%;
+    background-color: #1a191a;
+ color: #1a0336;   
+ font-size: 30px;
+ font-weight: bold;
+ text-align: center;
+
+}
+
+/* CONTAINER 2 -------------------- ---------------- */
+.container-5 {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-5 .slide-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1a191a;
+    color: white;
+    padding: 40px;
+    overflow: hidden; /* منع التمرير وتقييد المحتوى داخل القسم */
+    box-sizing: border-box; /* لضمان أن الت padding لا يتسبب في تجاوز الحجم */
+}
+
+.container-5 .slide-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1a191a;
+    color: #f3d00d;
+    padding: 40px;
+    overflow: hidden; /* منع التمرير وتقييد المحتوى داخل القسم */
+    box-sizing: border-box; /* لضمان أن الت padding لا يتسبب في تجاوز الحجم */
+}
+
+.container-5 .slide-1 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f3d00d;
+}
+
+.container-5 .slide-2 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ececeb;
+}
+
+
+.slide-2 p, .location p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #100f0f;
+}
+
+.about-image, .location-image {
+    width: 100%; /* Taking the full width of the container */
+    max-width: 400px; /* Limit the width to a maximum of 400px */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-height: 250px; /* Limit the height to 250px */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container-5 .slide-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f3d00d;
+    padding: 40px;
+    overflow-y: auto;
+}
+.container-5 .slide-2 img {
+    margin-top: 40px;
+    width: 190px;  /* تكبير الصورة */
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 0;  /* إضافة قيمة padding إذا كنت بحاجة إليها */
+    display: block;  /* لجعل الصورة عنصر بلوك */
+    margin-left: auto;  /* لتوسيط الصورة من الجهة اليسرى */
+    margin-right: auto;  /* لتوسيط الصورة من الجهة اليمنى */
+}
+.text-space {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    color: #f3d00d;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.items-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container-5 .slide-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a191a;
+}
+
+
+.container-5 h2 {
+    font-size: 40px;
+    margin: 0;
+}
+.container-2 .item {
+    background-color: #252525;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-2 .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container-2 .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-2 .item h3 {
+    font-size: 22px;
+    color: #f3d00d;
+    margin: 10px 0;
+}
+
+.container-2 .item p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+
+.container-3 {
+    display: flex;
+    flex-direction:row;
+    background-color: #1a191a;
+    padding: 40px;
+    gap: 60px;
+}
+
+.container-3 .Game-Card {
+    background-color: #252525;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-3 .Game-Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container-3 .Game-Card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-3 .Game-Card h3 {
+    font-size: 22px;
+    color: #f3d00d;
+    margin: 10px 0;
+}
+
+.container-3 .item p {
+    font-size: 16px;
+    color: #cccccc;
+}
+h2{
+    color: #f3d00d;
+}
+
+.container-4 {
+    display: flex;
+    flex-direction:row;
+    background-color: #1a191a;
+    padding: 40px;
+    gap: 60px;
+}
+
+.container-4 .Game-Card {
+    background-color: #252525;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-4 .Game-Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.container-4 .Game-Card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-4 .Game-Card h3 {
+    font-size: 22px;
+    color: #f3d00d;
+    margin: 10px 0;
+}
+
+.container-4 .item p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+
+
+.site-footer {
+    background-color: #1a1a1d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.part-3 {
+    width: 100%;
+    margin: auto;
+    background-color: #1a191a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.part-3 h2 {
+    text-align: center; /* توسيط العنوان */
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f3d00d;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.text {
+    flex: 1;
+    text-align: right;
+    font-size: 20px;
+    color: #ffffff;
+    padding-right: 20px;
+}
+
+.triangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.triangle-item {
+    text-align: center;
+    
+}
+
+.triangle-item img {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.triangle-item h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ece4e4;
+}
+
+
+    
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .items-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*  <h2>Our Services</h2>
+            <div class="triangle-container">
+                <div class="triangle-item">
+                    <img src="/medea/pc.jpg" alt="PC">
+                    <h3>PC Gaming</h3>
+                </div>
+                <div class="triangle-item">
+                    <img src="/medea/ps5.jpg" alt="PS5">
+                    <h3>PlayStation 5</h3>
+                </div>
+                <div class="triangle-item">
+                    <img src="/medea/xbox.jpg" alt="Xbox">
+                    <h3>Xbox Series X</h3>
+                </div>
+            </div>
+            <div class="text-space">
+                <p>This is some random text to fill the space beside the triangle. We can add more details about our services, about the latest updates, and much more!</p>
+            </div> */ 
+            
